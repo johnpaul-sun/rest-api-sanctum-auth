@@ -49,3 +49,35 @@ const secondArgumentNotZero = func => (...args) => {
  
 // console.log(secondArgumentNotZero(divide)(7,1))
 
+//Spread operator
+
+const car = {
+    color: "red",
+    tire: 4,
+    type: "SUV",
+}
+
+const company = {
+    manufacturer: "Toyota",
+    branch: "Abad Santos",
+    agentName: "Anne Smith"
+}
+
+const updateData = {
+    color: "black"
+}
+
+const mergeData = {
+    ...car,
+    ...company,
+    ...updateData
+}
+
+const carNumbers = [1,2,3,4,5]
+const newCarNumbers = [
+    0,
+    ...carNumbers,
+    6
+]
+console.log(newCarNumbers)
+// console.log(mergeData)
