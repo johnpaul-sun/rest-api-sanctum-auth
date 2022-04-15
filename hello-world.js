@@ -100,6 +100,16 @@ const map = (arr, func) => {
     ], [])
 }
 
-console.log(map([1,2,3], x => x * 2))
-console.log(map([5,6,7,8,9,10], x => -x))
-console.log(map(['a', 'b', 'c', 'd'], x => x.toUpperCase()))
+// console.log(map([1,2,3], x => x * 2))
+// console.log(map([5,6,7,8,9,10], x => -x))
+// console.log(map(['a', 'b', 'c', 'd'], x => x.toUpperCase()))
+
+//Currying and partial application
+
+const add = (x, y, z) => x + y + z;
+
+const addPartial = x => y => z => add(x,y,z)
+
+// const sum = addPartial(1)(2)(3)
+
+console.log(sum)
