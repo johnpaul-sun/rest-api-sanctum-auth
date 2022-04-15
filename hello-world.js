@@ -35,3 +35,17 @@ const me = Person({name: "Paul", age: 21, job: "Developer"})
 
 // console.log(me.getName())
 // console.log(me.setName("Pong")) 
+
+//Higher-order functions
+const divide = (x,y) => x / y;
+
+const secondArgumentNotZero = func => (...args) => {
+    if (args[1] === 0) {
+        console.log("Error: dividing by zero")
+        return null
+    } 
+    return func(...args)
+}
+ 
+// console.log(secondArgumentNotZero(divide)(7,1))
+
