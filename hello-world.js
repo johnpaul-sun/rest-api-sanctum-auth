@@ -107,9 +107,18 @@ const map = (arr, func) => {
 //Currying and partial application
 
 const add = (x, y, z) => x + y + z;
-
 const addPartial = x => y => z => add(x,y,z)
+const sum = addPartial(1)(2)(3)
 
-// const sum = addPartial(1)(2)(3)
+// console.log(sum)
 
-console.log(sum)
+//Recursion
+
+const recursion = (start, end)=>{
+    if(start < end) return;
+
+    console.log(start)
+    recursion(start - 1, end)
+}
+
+// recursion(10, 0)
