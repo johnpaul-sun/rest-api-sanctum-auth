@@ -79,5 +79,27 @@ const newCarNumbers = [
     ...carNumbers,
     6
 ]
-console.log(newCarNumbers)
+// console.log(newCarNumbers)
 // console.log(mergeData)
+
+//Recrate Map function
+
+// const map = (arr, func) => { 
+//     let newData = []
+//     arr.forEach(a => {
+//         newData.push(func(a))
+//     })   
+    
+//     return newData
+// }
+
+const map = (arr, func) => {  
+    return arr.reduce((acc, x) => [
+        ...acc,
+        func(x) 
+    ], [])
+}
+
+console.log(map([1,2,3], x => x * 2))
+console.log(map([5,6,7,8,9,10], x => -x))
+console.log(map(['a', 'b', 'c', 'd'], x => x.toUpperCase()))
